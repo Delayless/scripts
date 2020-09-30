@@ -1,0 +1,12 @@
+#!/bin/bash
+
+LOCAL_IP=$(ip addr | sed -En 's/.*inet (addr:)?(([0-9]*\.){3}[0-9]*)\/24/\2/p' | awk '{ print "LAN:" $1 }')
+MEMORY_USAGE=$(free -h | sed -n "2p" | awk '{print $NF}')
+# TEMPERATURE=$(sensors | grep Core | awk '{print $3}' | head -n 1 | grep -oE "[0-9.]+")
+# 
+BATTERY=$(acpi | grep -o -E "[0-9]+%")
+VOLUME=$(~/scripts/set_volume.sh --get-volume)
+TIME=$(date '+%Y-%m-%d %H:%M %A')
+
+xsetroot -name "$LOCAL_IP MEM $MEMORY_USAGE ⚡$BATTERY 奄$VOLUME $TIME"
+

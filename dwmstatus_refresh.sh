@@ -1,0 +1,30 @@
+#!/bin/bash
+
+LOC=$(readlink $0)
+DIR=$(dirname $LOC)
+BATTERY=$($DIR/statusbar/battery)
+CLOCK=$($DIR/statusbar/clock)
+CPU=$($DIR/statusbar/cpu)
+CPUBARS=$($DIR/statusbar/cpubars)
+CRYPTO=$($DIR/statusbar/crypto)
+DISK=$($DIR/statusbar/disk)
+HELP_ICON=$($DIR/statusbar/help-icon)
+INTERNET=$($DIR/statusbar/internet)
+IPLOCATE=$($DIR/statusbar/iplocate)
+KBSELECT=$($DIR/statusbar/kbselect)
+MAILBOX=$($DIR/statusbar/mailbox)
+MEMORY=$($DIR/statusbar/memory)
+MOONPHASE=$($DIR/statusbar/moonphase)
+MPDUP=$($DIR/statusbar/mpdup)
+MUSIC=$($DIR/statusbar/music)
+NETTRAF=$($DIR/statusbar/nettraf)
+NEWS=$($DIR/statusbar/news)
+PACPACKAGES=$($DIR/statusbar/pacpackages)
+POPUPGRADE=$($DIR/statusbar/popupgrade)
+PRICE=$($DIR/statusbar/price)
+TORRENT=$($DIR/statusbar/torrent)
+VOLUME=$($DIR/statusbar/volume)
+WEATHER=$($DIR/statusbar/weather)
+
+xsetroot -name "=$LOCAL_IP MEM=$MEMORY_USAGE ⚡=$BATTERY 奄=$VOLUME=$TIME"
+
