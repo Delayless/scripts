@@ -1,9 +1,12 @@
 #!/bin/bash
 
-# /bin/bash ~/scripts/feh.sh &
-/bin/bash ~/scripts/wallpaper-autochange.sh &
-/bin/bash ~/scripts/dwm-status.sh &
-# /bin/bash ~/scripts/fcitx5.sh &
+SCRIPT=$(readlink -f $0)
+SCRIPTPATH=$(dirname $SCRIPT)
+echo $SCRIPT
+# /bin/bash $SCRIPTPATH/feh.sh &
+/bin/bash $SCRIPTPATH/wallpaper-autochange.sh &
+/bin/bash $SCRIPTPATH/dwm-status.sh &
+# /bin/bash $SCRIPTPATH/fcitx5.sh &
 nm-applet &
 blueman-tray &
 # fcitx5 &
