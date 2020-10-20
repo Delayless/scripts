@@ -5,5 +5,5 @@ DIR=$(dirname $LOC)
 while true
 do
 	bash $DIR/dwm-status-refresh.sh
-	sleep 2
+	sleep 1
 done
