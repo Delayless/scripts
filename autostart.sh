@@ -9,7 +9,7 @@ echo $SCRIPT
 # /bin/bash $SCRIPTPATH/fcitx5.sh &
 nm-applet &
 blueman-tray &
-udiskie &
+udiskie -t &
 # fcitx5 &
 goldendict &
 picom -b
