@@ -68,7 +68,7 @@ get_time_until_charged() {
 	present_rate=$(acpitool -B | grep -E 'Present rate' | awk '{print $4}' | grep -Eo "[0-9]+" | paste -sd+ | bc);
 
 	# divides current charge by the rate at which it's falling, then converts it into seconds for `date`
-	[ $present_rate -ne 0 ] && seconds=$(bc <<< "scale = 10; ($sum_remaining_charge / $present_rate) * 3600");
+	[[ $present_rate -ne 0 ]] && seconds=$(bc <<< "scale = 10; ($sum_remaining_charge / $present_rate) * 3600");
 
 	# prettifies the seconds into h:mm:ss format
 	[[ ! -z "$seconds" ]] && pretty_time=$(date -u -d @${seconds} +%T) && echo ", $pretty_time"
