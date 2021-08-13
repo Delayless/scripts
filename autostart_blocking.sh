@@ -10,4 +10,3 @@ SCRIPTPATH=$(dirname $SCRIPT)
 /bin/bash $SCRIPTPATH/tap-to-click.sh
 /bin/bash $SCRIPTPATH/inverse-scroll.sh
 
-# pactl set-default-sink alsa_output.pci-0000_00_1b.0.analog-stereo
