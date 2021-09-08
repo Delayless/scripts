@@ -55,10 +55,10 @@ case $1 in
 			# echo "🔇"
 			echo "🔈✖"
 			# echo "✖"
-		elif [ $DEFAULT_SINK_VOLUME -gt 0 ] && [ $DEFAULT_SINK_VOLUME -le 33 ]; then
+		elif [[ $DEFAULT_SINK_VOLUME -gt 0 ]] && [[ $DEFAULT_SINK_VOLUME -le 33 ]]; then
 			# echo $DEFAULT_SINK_VOLUME
 			printf "🔈%s%%" "$DEFAULT_SINK_VOLUME"
-		elif [ "$DEFAULT_SINK_VOLUME" -gt 33 ] && [ "$DEFAULT_SINK_VOLUME" -le 66 ]; then
+		elif [[ "$DEFAULT_SINK_VOLUME" -gt 33 ]] && [[ "$DEFAULT_SINK_VOLUME" -le 66 ]]; then
 			printf "🔉%s%%" "$DEFAULT_SINK_VOLUME"
 		else
 			printf "🔊%s%%" "$DEFAULT_SINK_VOLUME"
