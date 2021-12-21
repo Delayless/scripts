@@ -5,7 +5,6 @@ SCRIPTPATH=$(dirname $SCRIPT)
 # /bin/bash $SCRIPTPATH/feh.sh &
 /bin/bash $SCRIPTPATH/wallpaper-autochange.sh &
 /bin/bash $SCRIPTPATH/dwm-status.sh &
-# /bin/bash $SCRIPTPATH/fcitx5.sh &
 nm-applet &
 blueman-tray &
 udiskie -s &
@@ -16,6 +15,7 @@ xrandr --setprovideroffloadsink nouveau Intel
 # OR
 # xrandr --setprovideroffloadsink 1 0
 picom -b --unredir-if-possible --backend xr_glx_hybrid --vsync --use-damage --glx-no-stencil
+keynav
 # without PRIME GPU offloading, xcompmgr is better maybe
 # xcompmgr -c &
 dunst &
