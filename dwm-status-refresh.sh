@@ -72,6 +72,9 @@ get_time_until_charged() {
 
 	# prettifies the seconds into h:mm:ss format
 	[[ ! -z "$seconds" ]] && pretty_time=$(date -u -d @${seconds} +%T) && echo ", $pretty_time"
+
+	remaining_time=$(acpi -b | awk '{print $5}');
+	[[ ! -z "$remaining_time" ]] && echo ", $remaining_time"
 }
 
 get_battery_combined_percent() {
