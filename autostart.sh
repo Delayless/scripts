@@ -5,8 +5,8 @@ SCRIPTPATH=$(dirname $SCRIPT)
 # /bin/bash $SCRIPTPATH/feh.sh &
 /bin/bash $SCRIPTPATH/wallpaper-autochange.sh &
 /bin/bash $SCRIPTPATH/dwm-status.sh &
-nm-applet &
-blueman-tray &
+# nm-applet &
+# blueman-tray &
 udiskie -s &
 # fcitx5 -d
 goldendict &
