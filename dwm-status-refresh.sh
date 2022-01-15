@@ -22,8 +22,11 @@ function get_velocity {
 	now=$3
 
 	timediff=$(($now - $old_time))
+	# velKB=$(($(echo "1000000000*($value-$old_value)/1024/$timediff" | bc)))
+	# use the above command, then the follow [if statement] can be `if test "$velKB" -gt 1024`
+	# otherwise, must be ${velKB}
 	velKB=$(echo "1000000000*($value-$old_value)/1024/$timediff" | bc)
-	if test "$velKB" -gt 1024
+	if test "${velKB}" -gt 1024
 	then
 		echo $(echo "scale=2; $velKB/1024" | bc)MB/s
 	else

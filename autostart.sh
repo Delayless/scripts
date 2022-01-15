@@ -8,7 +8,7 @@ SCRIPTPATH=$(dirname $SCRIPT)
 # nm-applet &
 # blueman-tray &
 udiskie -s &
-# fcitx5 -d
+fcitx5 -d
 goldendict &
 # `xrandr --listproviders` to query the parameters
 xrandr --setprovideroffloadsink nouveau Intel
