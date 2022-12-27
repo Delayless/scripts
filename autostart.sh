@@ -16,6 +16,7 @@ xrandr --setprovideroffloadsink nouveau Intel
 # xrandr --setprovideroffloadsink 1 0
 picom -b --unredir-if-possible --backend xr_glx_hybrid --vsync --use-damage --glx-no-stencil
 keynav
+greenclip daemon &
 # without PRIME GPU offloading, xcompmgr is better maybe
 # xcompmgr -c &
 dunst &
