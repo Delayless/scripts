@@ -1,14 +1,15 @@
 #!/bin/bash
 
 # Default computer speaker
-pactl set-default-sink alsa_output.pci-0000_00_1b.0.analog-stereo
+# xrandr --listmonitors
+pactl set-default-sink alsa_output.pci-0000_35_00.6.HiFi__hw_Generic__sink
 
-hdmi_flag=$(pactl list short | grep alsa_output.pci-0000_00_03.0.hdmi-stereo)
+hdmi_flag=$(pactl list short | grep monitor)
 if [[ $hdmi_flag ]]
 then
-# Dell Display
-xrandr --output HDMI-1 --auto --left-of eDP-1
-# little screen
-xrandr --output DP-1 --auto --left-of HDMI-1 --rotate left
-pactl set-default-sink alsa_output.pci-0000_00_03.0.hdmi-stereo
+	# Dell Display
+	xrandr --output HDMI-0 --auto --right-of DP-4
+	# xrandr --output HDMI-1 --rotate left
+	# xrandr --output DP-1 --auto --left-of HDMI-1 --rotate left
+	pactl set-default-sink alsa_output.pci-0000_01_00.1.HiFi__hw_NVidia_3__sink
 fi
