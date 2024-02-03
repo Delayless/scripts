@@ -5,6 +5,7 @@ SCRIPTPATH=$(dirname $SCRIPT)
 # /bin/bash $SCRIPTPATH/feh.sh &
 /bin/bash $SCRIPTPATH/wallpaper-autochange.sh &
 /bin/bash $SCRIPTPATH/dwm-status.sh &
+/bin/bash $SCRIPTPATH/BatteryMonitor.sh &
 # nm-applet &
 blueman-tray &
 udiskie -s &
